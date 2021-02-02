@@ -5,7 +5,8 @@
  */
 package compiti.c2;
 
-import compiti.c1.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -15,14 +16,14 @@ public class App {
     public static void main(String[] args) {
         
          Catalogo cat1 = new Catalogo();
-         SingoloArticolo articolo1 = new SingoloArticolo("Articolo1",10);
-         SingoloArticolo articolo2 = new SingoloArticolo("Articolo2",20);         
-         SingoloArticolo articolo3 = new SingoloArticolo("Articolo3",30);         
-         SingoloArticolo articolo4 = new SingoloArticolo("Articolo4",40);
-         SingoloArticolo articolo5 = new SingoloArticolo("Articolo5",50);
-         SingoloArticolo articolo6 = new SingoloArticolo("Articolo6",60);         
-         SingoloArticolo articolo7 = new SingoloArticolo("Articolo7",70);         
-         SingoloArticolo articolo8 = new SingoloArticolo("Articolo8",80);
+         Mobile articolo1 = new Mobile("Articolo1",10,3,8,9);
+         Mobile articolo2 = new Mobile("Articolo2",20,23,6,98);         
+         Mobile articolo3 = new Mobile("Articolo3",30,7,1,2);         
+         Mobile articolo4 = new Mobile("Articolo4",40,7,6,5);
+         Mobile articolo5 = new Mobile("Articolo5",50,96,23,56);
+         Mobile articolo6 = new Mobile("Articolo6",60,1,2,3);         
+         Mobile articolo7 = new Mobile("Articolo7",70,3,4,5);         
+         Mobile articolo8 = new Mobile("Articolo8",80,6,3,1);
          cat1.addArticolo(articolo1);
          cat1.addArticolo(articolo2);
          cat1.addArticolo(articolo3);
@@ -36,7 +37,16 @@ public class App {
          Catalogo cat2 = new Catalogo();
          cat2 = cat1.getArticoliSottoPrezzo(40);
          System.out.println(cat2.toString());
+         cat2 = ProvaMobile.scegliMobile(cat1, 60, 8, 8, 100);
+         System.out.println(cat2.toString());
          
-         
+    }
+    
+    public static <T extends Number> List<T> minoreDi(Comparable<T>[] arr,Comparable<T> num) {
+        List<T> ris = new ArrayList<>();
+        for(int i=0; i<arr.length; i++)
+            if(arr[i].compareTo((T) num)<0)
+                ris.add((T) arr[i]);
+        return ris;
     }
 }

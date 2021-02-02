@@ -28,7 +28,12 @@ public class Catalogo <E extends Articolo> implements Iterable<E> {
     }
     
     public Catalogo<E> getArticoliSottoPrezzo(double prezzo) {
+
         Catalogo<E> ris = new Catalogo<>();
+        /*Iterator<E> visit = catalogoArt.iterator();
+        while(visit.hasNext())
+            if(visit.next().getPrezzo()<prezzo)
+                ris.addArticolo()*/
         for(E el: catalogoArt) {
             if(el.getPrezzo()<prezzo)
                 ris.addArticolo(el);
