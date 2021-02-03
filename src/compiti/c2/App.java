@@ -6,7 +6,9 @@
 package compiti.c2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -38,19 +40,14 @@ public class App {
          cat1.addArticolo(articolo10);
          
          System.out.println(cat1.toString());
-        /* Catalogo cat2 = new Catalogo();
-         cat2 = cat1.getArticoliSottoPrezzo(40);
-         System.out.println(cat2.toString());
-         cat2 = ProvaMobile.scegliMobile(cat1, 60, 8, 8, 100);
-         System.out.println(cat2.toString());*/
+         
+         System.out.println(cat1.getArticoliSottoPrezzo(40));
+         System.out.println(ProvaMobile.scegliMobile(cat1, 60, 8, 8, 100));
          
     }
     
-    public static <T extends Number> List<T> minoreDi(Comparable<T>[] arr,Comparable<T> num) {
-        List<T> ris = new ArrayList<>();
-        for(int i=0; i<arr.length; i++)
-            if(arr[i].compareTo((T) num)<0)
-                ris.add((T) arr[i]);
-        return ris;
+    public static <T extends Number> List<T> minoreDi(T[] arr,T num) {
+        return Arrays.asList(arr).stream()
+                .filter(v->v.doubleValue()<num.doubleValue()).collect(Collectors.toList());
     }
 }

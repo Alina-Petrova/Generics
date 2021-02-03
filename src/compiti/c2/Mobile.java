@@ -14,33 +14,30 @@ import java.util.ArrayList;
  * @author utente
  */
 public class Mobile extends SingoloArticolo implements Articolo{
-    private String nome="";
-    private double prezzo=0;
-    
-    private Integer[] misure = new Integer[3];      
+    private final String nome="";
+    private final double prezzo=0;
+    private final int larghezza, altezza, profondita;
+     
 
 
     public Mobile(String nome, double prezzo,int larghezza,int altezza,int profondita) {
         super(nome, prezzo);
-        this.misure[0] = larghezza;
-        this.misure[1] = altezza;
-        this.misure[2] = profondita;   
+        this.larghezza = larghezza;
+        this.altezza = altezza;
+        this.profondita = profondita;   
     }
 
-    public Integer[] getMisure() {
-        return misure;
-    }
-
+    
     public int getLarghezza() {
-        return misure[0];
+        return larghezza;
     }
 
     public int getAltezza() {
-        return misure[1];
+        return altezza;
     }
 
     public int getProfondita() {
-        return misure[2];
+        return profondita;
     }   
     
     
@@ -52,7 +49,7 @@ public class Mobile extends SingoloArticolo implements Articolo{
     }
     @Override
     public String toString() {
-       return super.toString()+"le misure: ("+ misure[0]+","+misure[1]+","+misure[2]+")\n";
+       return super.toString()+"le misure: ("+ larghezza+","+altezza+","+profondita+")\n";
     }
     
 }
