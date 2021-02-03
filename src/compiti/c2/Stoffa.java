@@ -35,6 +35,9 @@ public class Stoffa extends SingoloArticolo implements Articolo{
         return prezzo*metraggio;
     }
     
-    
+    @Override
+    public String toString() {
+       return super.toString()+"Metraggio: "+ metraggio + "Colore; " + colore+ "\n";
+    }
     
 }
