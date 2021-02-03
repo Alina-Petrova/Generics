@@ -20,6 +20,8 @@ public class ProvaMobile {
     
     
     public static <E extends Mobile> List<E> scegliMobile(Catalogo<E> cat, double prezzo, int larghezza,int altezza,int profondita) {
+        for(Articolo articolo: cat )
+            if(Mobile.class.isInstance(cat))
         
         return cat.getArticoliSottoPrezzo(prezzo).stream()
                 .filter(v->v.getLarghezza()<larghezza && v.getAltezza()<altezza && v.getProfondita()<profondita).collect(Collectors.toList());
