@@ -27,6 +27,7 @@ public class ProvaMobile {
     public static <E extends Mobile, T extends Number> Catalogo<E> getArticoliSottoMisura(Catalogo<E> cat,Integer[] arrNum){
         Catalogo<E> ris = new Catalogo<>();
         for(E el:cat)
+            //if(el)
             if(minoriDiArray(el.getMisure(),arrNum))
                 ris.addArticolo(el);                    
         return ris;

@@ -24,6 +24,8 @@ public class App {
          Mobile articolo6 = new Mobile("Articolo6",60,1,2,3);         
          Mobile articolo7 = new Mobile("Articolo7",70,3,4,5);         
          Mobile articolo8 = new Mobile("Articolo8",80,6,3,1);
+         Stoffa articolo9 = new Stoffa("Seta",55,10,"Rosso");
+         Stoffa articolo10 = new Stoffa("Cotone",77,5,"Bianco");
          cat1.addArticolo(articolo1);
          cat1.addArticolo(articolo2);
          cat1.addArticolo(articolo3);
@@ -32,13 +34,15 @@ public class App {
          cat1.addArticolo(articolo6);
          cat1.addArticolo(articolo7);
          cat1.addArticolo(articolo8);
+         cat1.addArticolo(articolo9);
+         cat1.addArticolo(articolo10);
          
          System.out.println(cat1.toString());
-         Catalogo cat2 = new Catalogo();
+        /* Catalogo cat2 = new Catalogo();
          cat2 = cat1.getArticoliSottoPrezzo(40);
          System.out.println(cat2.toString());
          cat2 = ProvaMobile.scegliMobile(cat1, 60, 8, 8, 100);
-         System.out.println(cat2.toString());
+         System.out.println(cat2.toString());*/
          
     }
     
