@@ -17,10 +17,16 @@ public class Contatto {
     private TipoContatto tipoC;
     private String contatto;
 
+    public Contatto() {
+    }
+    
+
     public Contatto(TipoContatto tipoC,String contatto) {
         this.contatto = contatto;
         this.tipoC = tipoC;
     }
+    
+   // public Set<Contatto> agg
 
     public String getNome() {
         return contatto;

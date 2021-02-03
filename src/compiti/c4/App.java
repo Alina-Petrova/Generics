@@ -6,7 +6,7 @@
 package compiti.c4;
 
 import compiti.c4.Contatto.TipoContatto;
-import compiti.c4.Namekey.TipoLegame;
+import compiti.c4.Vocekey.TipoLegame;
 
 /**
  *
@@ -19,10 +19,10 @@ public class App {
         Rubrica rub1 = new Rubrica();
         
         Contatto c1 = new Contatto(TipoContatto.CASA,"0125 43267");
-        Namekey n1 = new Namekey("Mario Rossi", TipoLegame.SPORT);
+        Vocekey n1 = new Vocekey("Mario Rossi", TipoLegame.SPORT);
         
         Contatto c2 = new Contatto(TipoContatto.TELEGRAM,"CiccioBello");
-        Namekey n2 = new Namekey("Ricardo Bianchi", TipoLegame.AMICIZIE);
+        Vocekey n2 = new Vocekey("Ricardo Bianchi", TipoLegame.AMICIZIE);
         
         rub1.addContatto(n1, c1);
         rub1.addContatto(n2, c2);

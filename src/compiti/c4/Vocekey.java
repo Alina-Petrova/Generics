@@ -11,13 +11,13 @@ import java.util.Objects;
  *
  * @author utente
  */
-public class Namekey {
+public class Vocekey {
     public static enum TipoLegame {AMICIZIE, LAVORO, SPORT, MUSICA,FAMIGLIA};
     
     private String nome;
     private TipoLegame tipoL;
 
-    public Namekey(String nome, TipoLegame tipoL) {
+    public Vocekey(String nome, TipoLegame tipoL) {
         this.nome = nome;
         this.tipoL = tipoL;
     }
@@ -54,7 +54,7 @@ public class Namekey {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Namekey other = (Namekey) obj;
+        final Vocekey other = (Vocekey) obj;
         if (!Objects.equals(this.nome, other.nome)) {
             return false;
         }
