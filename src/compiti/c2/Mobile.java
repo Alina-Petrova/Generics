@@ -52,7 +52,7 @@ public class Mobile extends SingoloArticolo implements Articolo{
     }
     @Override
     public String toString() {
-       return "Nome = "+nome+" prezzo "+prezzo+"\n"+"le misure: ("+ misure[0]+","+misure[1]+","+misure[2]+")\n";
+       return super.toString()+"le misure: ("+ misure[0]+","+misure[1]+","+misure[2]+")\n";
     }
     
 }

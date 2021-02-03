@@ -19,6 +19,15 @@ public abstract class SingoloArticolo{
     }
 
 
-    
+    public String getNome() {
+        return nome;
+    }
+    public double getPrezzo() {
+        return prezzo;
+    }
+    @Override
+    public String toString() {
+       return "Nome = "+nome+" prezzo "+prezzo+"\n";
+    }
     
 }

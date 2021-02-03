@@ -76,8 +76,7 @@ public class MiaPila<T> implements Stack<T>, Iterable<T>{
             public T next() {
                 return arr[idx++];
             }
-    }
-   
+    }   
 }
 
 
